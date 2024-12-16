@@ -4,7 +4,7 @@ import mongoose, { ConnectOptions } from "mongoose";
 import session from "express-session";
 import bodyParser from "body-parser";
 import path from "path";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import dotenv from "dotenv";
 
 declare module "express-session" {
