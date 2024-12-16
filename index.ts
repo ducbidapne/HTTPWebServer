@@ -23,7 +23,6 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
@@ -51,7 +50,6 @@ function requireAuth(
   }
   res.redirect("/login");
 }
-
 
 app.get("/", (req, res) => {
   res.render("index", { user: req.session.userId });
@@ -110,3 +108,4 @@ app.get("/dashboard", requireAuth, (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+export default app;
