@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node index.ts",
-    "dev": "nodemon index.ts"
+    "dev": "nodemon index.ts",
+    "postinstall": "npm rebuild bcrypt --build-from-source"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "@types/mongoose": "^5.11.97",
     "@vercel/node": "^5.0.0",
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.0",
     "@types/express-session": "^1.18.1",
     "@types/node": "^22.10.2",
